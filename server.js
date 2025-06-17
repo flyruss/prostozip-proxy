@@ -6,9 +6,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(async (req, res, next) => {
   if (!req.path.startsWith('/api/')) return next();
-  
-  const target = 'https://api.prostozip.ru' + req.originalUrl.replace('/api', '');
-  
+
+  const target = 'https://auc.pakdv.ru' + req.originalUrl.replace('/api', '');
+
   try {
     const upstream = await fetch(target, {
       method: req.method,
